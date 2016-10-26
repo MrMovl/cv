@@ -3,4 +3,10 @@ module Content exposing (..)
 
 header : String
 header =
-    "Hello, World!"
+    """
+# Apple Pie Recipe
+
+  1. Invent the universe.
+  2. Bake an apple pie.
+
+"""

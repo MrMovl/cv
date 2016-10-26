@@ -3,6 +3,7 @@ module CV exposing (..)
 import Html exposing (..)
 import Html.App as App
 import Content exposing (..)
+import Markdown
 
 
 type Msg
@@ -21,7 +22,7 @@ model =
 
 view : Model -> Html Msg
 view model =
-    div [] [ Html.text model.header ]
+    Markdown.toHtml [] model.header
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
