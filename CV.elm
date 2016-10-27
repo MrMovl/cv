@@ -3,6 +3,7 @@ module CV exposing (..)
 import Html exposing (..)
 import Html.App as App
 import Content exposing (..)
+import CSS exposing (..)
 import Markdown
 
 
@@ -17,12 +18,15 @@ type alias Model =
 
 model : ( Model, Cmd Msg )
 model =
-    ( { header = Content.header }, Cmd.none )
+    ( { header = Content.cv }, Cmd.none )
 
 
 view : Model -> Html Msg
 view model =
-    Markdown.toHtml [] model.header
+    div [ mainStyle ]
+        [ div [ leftColumnStyle ] [ Markdown.toHtml [] model.header ]
+        , div [ rightColumnStyle ] [ Markdown.toHtml [] model.header ]
+        ]
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
