@@ -4,7 +4,6 @@ import Html exposing (..)
 import Html.App as App
 import Content exposing (..)
 import CSS exposing (..)
-import Markdown
 
 
 type Msg
@@ -18,15 +17,34 @@ type alias Model =
 
 model : ( Model, Cmd Msg )
 model =
-    ( { header = Content.cv }, Cmd.none )
+    ( { header = "test" }, Cmd.none )
 
 
 view : Model -> Html Msg
 view model =
     div [ mainStyle ]
-        [ div [ leftColumnStyle ] [ Markdown.toHtml [] model.header ]
-        , div [ rightColumnStyle ] [ Markdown.toHtml [] model.header ]
-        ]
+        [ createCvView ]
+
+
+createCvView : Html Msg
+createCvView =
+    List.map ulify blocks |> div []
+
+
+ulify : List String -> Html Msg
+ulify elements =
+    let
+        cleanLi =
+            li []
+
+        listify =
+            [] |> flip (::)
+    in
+        elements
+            |> List.map text
+            |> List.map listify
+            |> List.map cleanLi
+            |> ul []
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
