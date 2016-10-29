@@ -1,8 +1,16 @@
 module Content exposing (..)
 
+import Html exposing (Attribute)
+import Html.Attributes exposing (src)
+
 
 type alias Block =
     List String
+
+
+gravatarSource : Attribute a
+gravatarSource =
+    src "https://secure.gravatar.com/avatar/fa61ab6f435658b0255a28d1ce2c7f69?s=200"
 
 
 blocks : List Block
@@ -18,7 +26,7 @@ blocks =
 
 contactInfo : Block
 contactInfo =
-    [ "Tomke Reibisch <img style='float:right' src='https://secure.gravatar.com/avatar/fa61ab6f435658b0255a28d1ce2c7f69?s=200'>"
+    [ "Tomke Reibisch <img style='float:right' >"
     , "Tel.: 0151/40037773"
     , "<treibisch@gmail.com>"
     , "Geb. am 02. September 1986 in Rendsburg"

@@ -23,12 +23,17 @@ model =
 view : Model -> Html Msg
 view model =
     div [ mainStyle ]
-        [ createCvView ]
+        [ createCvView, gravatar ]
+
+
+gravatar : Html Msg
+gravatar =
+    img [ gravatarSource, floatRight ] []
 
 
 createCvView : Html Msg
 createCvView =
-    List.map ulify blocks |> div []
+    List.map ulify blocks |> div [ floatLeft ]
 
 
 ulify : List String -> Html Msg

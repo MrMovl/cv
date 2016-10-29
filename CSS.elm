@@ -26,3 +26,15 @@ rightColumnStyle =
         , ( "padding", "5px" )
         , ( "float", "left" )
         ]
+
+
+floatRight : Html.Attribute a
+floatRight =
+    style
+        [ ( "float", "right" ) ]
+
+
+floatLeft : Html.Attribute a
+floatLeft =
+    style
+        [ ( "float", "left" ) ]
