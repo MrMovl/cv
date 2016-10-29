@@ -26,7 +26,7 @@ blocks =
 
 contactInfo : Block
 contactInfo =
-    [ "Tomke Reibisch <img style='float:right' >"
+    [ "Tomke Reibisch"
     , "Tel.: 0151/40037773"
     , "<treibisch@gmail.com>"
     , "Geb. am 02. September 1986 in Rendsburg"

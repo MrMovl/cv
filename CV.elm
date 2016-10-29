@@ -4,6 +4,8 @@ import Html exposing (..)
 import Html.App as App
 import Content exposing (..)
 import CSS exposing (..)
+import String
+import Html.Attributes exposing (href)
 
 
 type Msg
@@ -38,18 +40,47 @@ createCvView =
 
 ulify : List String -> Html Msg
 ulify elements =
-    let
-        cleanLi =
-            li []
+    elements
+        |> List.map elementToHtml
+        |> List.map listify
+        |> List.map cleanLi
+        |> ul []
 
-        listify =
-            [] |> flip (::)
+
+elementToHtml : String -> Html a
+elementToHtml element =
+    let
+        firstLetter =
+            String.slice 0 1 element
     in
-        elements
-            |> List.map text
-            |> List.map listify
-            |> List.map cleanLi
-            |> ul []
+        if firstLetter == "<" then
+            mailaddressToLink element
+        else
+            text element
+
+
+mailaddressToLink : String -> Html a
+mailaddressToLink address =
+    let
+        mailto =
+            href ("mailto:" ++ address)
+    in
+        address |> stripExcess |> text |> listify |> a [ mailto ]
+
+
+stripExcess : String -> String
+stripExcess string =
+    String.slice 1 ((String.length string) - 1) string
+
+
+listify : a -> List a
+listify =
+    [] |> flip (::)
+
+
+cleanLi : List (Html a) -> Html a
+cleanLi =
+    li []
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
