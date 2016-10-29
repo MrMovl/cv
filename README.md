@@ -1,2 +1,2 @@
 # cv
-Not yet my CV
+My not yet very pretty CV
