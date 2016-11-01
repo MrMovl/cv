@@ -7,7 +7,13 @@ import Html exposing (Attribute)
 mainStyle : Html.Attribute a
 mainStyle =
     style
-        [ ( "margin", "15px" ) ]
+        [ ( "padding", "15px" )
+        , ( "width", "100%" )
+        , ( "height", "100%" )
+        , ( "font-family", "monospace" )
+        , ( "font-size", "14px" )
+        , ( "background-color", "#68ADF2" )
+        ]
 
 
 leftColumnStyle : Html.Attribute a
@@ -28,13 +34,28 @@ rightColumnStyle =
         ]
 
 
-floatRight : Html.Attribute a
-floatRight =
+imageStyle : Html.Attribute a
+imageStyle =
     style
-        [ ( "float", "right" ) ]
+        [ ( "float", "left" )
+        , ( "margin", "13px" )
+        , ( "border-radius", "4px" )
+        ]
 
 
-floatLeft : Html.Attribute a
-floatLeft =
+contentStyle : Html.Attribute a
+contentStyle =
     style
-        [ ( "float", "left" ) ]
+        [ ( "float", "left" )
+        , ( "width", "80%" )
+        ]
+
+
+list : Html.Attribute a
+list =
+    style
+        [ ( "list-style-type", "none" )
+        , ( "padding", "10px 5px" )
+        , ( "border-radius", "4px" )
+        , ( "background-color", "#68C4F2" )
+        ]

@@ -30,12 +30,12 @@ view model =
 
 gravatar : Html Msg
 gravatar =
-    img [ gravatarSource, floatRight ] []
+    img [ gravatarSource, imageStyle ] []
 
 
 createCvView : Html Msg
 createCvView =
-    List.map ulify blocks |> div [ floatLeft ]
+    List.map ulify blocks |> div [ contentStyle ]
 
 
 ulify : List String -> Html Msg
@@ -44,7 +44,7 @@ ulify elements =
         |> List.map elementToHtml
         |> List.map listify
         |> List.map cleanLi
-        |> ul []
+        |> ul [ list ]
 
 
 elementToHtml : String -> Html a
