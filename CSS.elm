@@ -12,24 +12,6 @@ mainStyle =
         , ( "height", "100%" )
         , ( "font-family", "monospace" )
         , ( "font-size", "14px" )
-        , ( "background-color", "#68ADF2" )
-        ]
-
-
-leftColumnStyle : Html.Attribute a
-leftColumnStyle =
-    style
-        [ ( "width", "49%" )
-        , ( "padding", "5px" )
-        , ( "float", "left" )
-        ]
-
-
-rightColumnStyle : Html.Attribute a
-rightColumnStyle =
-    style
-        [ ( "width", "49%" )
-        , ( "padding", "5px" )
         , ( "float", "left" )
         ]
 
@@ -48,6 +30,7 @@ contentStyle =
     style
         [ ( "float", "left" )
         , ( "width", "80%" )
+        , ( "height", "100%" )
         ]
 
 
