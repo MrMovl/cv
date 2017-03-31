@@ -34,11 +34,17 @@ contentStyle =
         ]
 
 
-list : Html.Attribute a
-list =
+blockStyle : Html.Attribute a
+blockStyle =
+    style [ ( "padding-bottom", "10px" ) ]
+
+
+listStyle : Html.Attribute a
+listStyle =
     style
         [ ( "list-style-type", "none" )
-        , ( "padding", "10px 5px" )
+        , ( "padding", "10px 10px" )
         , ( "border-radius", "4px" )
-        , ( "background-color", "#68C4F2" )
+        , ( "color", "white" )
+        , ( "background-color", "#82b541" )
         ]

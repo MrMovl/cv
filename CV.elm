@@ -1,7 +1,6 @@
 module CV exposing (..)
 
 import Html exposing (..)
-import Html.App as App
 import Content exposing (..)
 import CSS exposing (..)
 import Markdown exposing (toHtml)
@@ -24,7 +23,7 @@ model =
 view : Model -> Html Msg
 view model =
     div [ mainStyle ]
-        [ createCvView, gravatar ]
+        [ cvView, gravatar ]
 
 
 gravatar : Html Msg
@@ -32,18 +31,26 @@ gravatar =
     img [ gravatarSource, imageStyle ] []
 
 
-createCvView : Html Msg
-createCvView =
-    List.map ulify blocks |> div [ contentStyle ]
+cvView : Html Msg
+cvView =
+    List.map blockView blocks |> div [ contentStyle ]
 
 
-ulify : List String -> Html Msg
-ulify elements =
-    elements
+blockView : Group -> Html Msg
+blockView { title, content } =
+    div [ blockStyle ]
+        [ h3 [] [ text title ]
+        , ulify content
+        ]
+
+
+ulify : Block -> Html Msg
+ulify content =
+    content
         |> List.map (\element -> Markdown.toHtml [] element)
         |> List.map listify
         |> List.map (\element -> li [] element)
-        |> ul [ list ]
+        |> ul [ listStyle ]
 
 
 listify : a -> List a
@@ -58,9 +65,8 @@ update msg model =
             ( model, Cmd.none )
 
 
-main : Program Never
 main =
-    App.program
+    Html.program
         { init = model
         , view = view
         , subscriptions = \_ -> Sub.none
