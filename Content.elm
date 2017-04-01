@@ -60,8 +60,8 @@ extraExperiences =
     { title = "Nebenberufliche Erfahrungen"
     , content =
         [ "[2010 -- 2013] Aktives Mitglied in der [Fachschaft Mathe & Informatik](https://www.fs-infmath.uni-kiel.de/wiki/Hauptseite) der CAU Kiel"
-        , "[06/2012 -- 05/2013] Koorganisator der [Konferenz der Informatikfachschaften 41.0](https://kif.fsinf.de/wiki/KIF410:Hauptseite)"
-        , "[04/2016 -- ] Koorganisator vom [Elmoin Meetup](https://www.meetup.com/de-DE/Elmoin/)"
+        , "[06/2012 -- 05/2013] Co-Organisator der [Konferenz der Informatikfachschaften 41.0](https://kif.fsinf.de/wiki/KIF410:Hauptseite)"
+        , "[04/2016 -- ] Co-Organisator vom [Elmoin Meetup](https://www.meetup.com/de-DE/Elmoin/)"
         ]
     }
 
