@@ -46,5 +46,5 @@ listStyle =
         , ( "padding", "10px 10px" )
         , ( "border-radius", "4px" )
         , ( "color", "white" )
-        , ( "background-color", "#82b541" )
+        , ( "background-color", "#4e875b" )
         ]
