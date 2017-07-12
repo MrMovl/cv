@@ -23,7 +23,11 @@ model =
 view : Model -> Html Msg
 view model =
     div [ mainStyle ]
-        [ cvView, gravatar ]
+        [ mainHeader, cvView, gravatar ]
+
+
+mainHeader =
+    h2 [ headerStyle ] [ text "Curriculum Vitae: Tomke Reibisch" ]
 
 
 gravatar : Html Msg
@@ -37,25 +41,16 @@ cvView =
 
 
 blockView : Group -> Html Msg
-blockView { title, content } =
+blockView { title, names, content } =
     div [ blockStyle ]
-        [ h3 [] [ text title ]
-        , ulify content
+        [ h3 [ headerStyle ] [ text title ]
+        , div [ leftColumnStyle ] (List.map markdown names)
+        , div [ rightColumnStyle ] (List.map markdown content)
         ]
 
 
-ulify : Block -> Html Msg
-ulify content =
-    content
-        |> List.map (\element -> Markdown.toHtml [] element)
-        |> List.map listify
-        |> List.map (\element -> li [] element)
-        |> ul [ listStyle ]
-
-
-listify : a -> List a
-listify =
-    [] |> flip (::)
+markdown field =
+    div [] [ Markdown.toHtml [ fieldStyle ] field, br [] [] ]
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )

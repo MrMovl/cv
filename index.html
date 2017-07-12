@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html><head><meta charset="UTF-8"><title>CV</title><style>html,head,body { padding:0; margin:0; }
-body { font-family: calibri, helvetica, arial, sans-serif; } a{color: #8ff7a7}</style><script type="text/javascript">
+body { font-family: calibri, helvetica, arial, sans-serif; }</style><script type="text/javascript">
 (function() {
 'use strict';
 
@@ -8255,32 +8255,42 @@ var _evancz$elm_markdown$Markdown$Options = F4(
 	function (a, b, c, d) {
 		return {githubFlavored: a, defaultHighlighting: b, sanitize: c, smartypants: d};
 	});
-var _user$project$CSS$aStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$CSS$fieldStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'color', _1: '#8ff7a7'},
+		_0: {ctor: '_Tuple2', _0: 'display', _1: 'inline-block'},
 		_1: {ctor: '[]'}
+	});
+var _user$project$CSS$rowStyle = _elm_lang$html$Html_Attributes$style(
+	{ctor: '[]'});
+var _user$project$CSS$rightColumnStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'display', _1: 'inline-block'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'width', _1: '80%'},
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$CSS$leftColumnStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'display', _1: 'inline-block'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'width', _1: '20%'},
+			_1: {ctor: '[]'}
+		}
 	});
 var _user$project$CSS$listStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'list-style-type', _1: 'none'},
+		_0: {ctor: '_Tuple2', _0: 'padding', _1: '10px 10px'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'padding', _1: '10px 10px'},
-			_1: {
-				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'border-radius', _1: '4px'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
-					_1: {
-						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'background-color', _1: '#4e875b'},
-						_1: {ctor: '[]'}
-					}
-				}
-			}
+			_0: {ctor: '_Tuple2', _0: 'border-radius', _1: '4px'},
+			_1: {ctor: '[]'}
 		}
 	});
 var _user$project$CSS$blockStyle = _elm_lang$html$Html_Attributes$style(
@@ -8317,61 +8327,97 @@ var _user$project$CSS$imageStyle = _elm_lang$html$Html_Attributes$style(
 			}
 		}
 	});
+var _user$project$CSS$headerStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'clear', _1: 'both'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'background-color', _1: '#98ff98'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'padding', _1: '5px'},
+				_1: {ctor: '[]'}
+			}
+		}
+	});
 var _user$project$CSS$mainStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'padding', _1: '15px'},
+		_0: {ctor: '_Tuple2', _0: 'margin', _1: '15px'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+			_0: {ctor: '_Tuple2', _0: 'height', _1: '100%'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'height', _1: '100%'},
+				_0: {ctor: '_Tuple2', _0: 'font-family', _1: 'monospace'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'font-family', _1: 'monospace'},
-					_1: {
-						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'font-size', _1: '14px'},
-						_1: {
-							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
-							_1: {ctor: '[]'}
-						}
-					}
+					_0: {ctor: '_Tuple2', _0: 'font-size', _1: '14px'},
+					_1: {ctor: '[]'}
 				}
 			}
 		}
 	});
 var _user$project$Content$misc = {
 	title: 'Weiteres',
-	content: {
+	names: {
 		ctor: '::',
-		_0: '[Sprachen] Deutsch (Muttersprache), Englisch (fließend)',
+		_0: 'Languages',
 		_1: {
 			ctor: '::',
-			_0: '[Interessen] Fotografie, Literatur  Comics, Schlagzeug, Rollen- und Brettspiele, Kochen, Tischlern',
+			_0: 'Non-technical hobbies',
+			_1: {ctor: '[]'}
+		}
+	},
+	content: {
+		ctor: '::',
+		_0: 'Deutsch (Muttersprache), Englisch (fließend)',
+		_1: {
+			ctor: '::',
+			_0: 'Fotografie, Literatur  Comics, Schlagzeug, Rollen- und Brettspiele, Kochen, Tischlern',
 			_1: {ctor: '[]'}
 		}
 	}
 };
 var _user$project$Content$jobExperience = {
 	title: 'Berufserfahrung',
-	content: {
+	names: {
 		ctor: '::',
-		_0: '[09/2006 -- 06/2007] Zivildienst in der integrativen Kindertagesstätte Regenbogen in Rendsburg',
+		_0: '09/2006 - 06/2007',
 		_1: {
 			ctor: '::',
-			_0: '[08/2008 -- 10/2011] Studentische Aushilfskraft bei [getdigital.de](https://www.getdigital.de), tätig in Logistik, Versand, Textilveredelung und Kommissionierung',
+			_0: '08/2008 - 10/2011',
 			_1: {
 				ctor: '::',
-				_0: '[11/2011 -- 03/2013] Hilfswissenschaftler, Projekt im Bereich der künstlichen Intelligenz, Prof. Dr. Rainer Adelung (TF der CAU zu Kiel)',
+				_0: '11/2011 - 03/2013',
 				_1: {
 					ctor: '::',
-					_0: '[05/2013 -- 01/2015] Auszubildender, Börsenportal [ARIVA.DE](https://www.ariva.de)',
+					_0: '05/2013 - 01/2015',
 					_1: {
 						ctor: '::',
-						_0: '[02/2015 -- ] Software Entwickler, [graphomate GmbH](http://www.graphomate.com) (Schwerpunkt im Bereich Visualisierung)',
+						_0: '02/2015 - ',
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	},
+	content: {
+		ctor: '::',
+		_0: 'Zivildienst in der integrativen Kindertagesstätte Regenbogen in Rendsburg',
+		_1: {
+			ctor: '::',
+			_0: 'Studentische Aushilfskraft bei [getdigital.de](https://www.getdigital.de), tätig in Logistik, Versand, Textilveredelung und Kommissionierung',
+			_1: {
+				ctor: '::',
+				_0: 'Hilfswissenschaftler, Projekt im Bereich der künstlichen Intelligenz, Prof. Dr. Rainer Adelung (TF der CAU zu Kiel)',
+				_1: {
+					ctor: '::',
+					_0: 'Auszubildender, Börsenportal [ARIVA.DE](https://www.ariva.de)',
+					_1: {
+						ctor: '::',
+						_0: 'Software Entwickler, [graphomate GmbH](http://www.graphomate.com) (Schwerpunkt im Bereich Visualisierung)',
 						_1: {ctor: '[]'}
 					}
 				}
@@ -8381,15 +8427,28 @@ var _user$project$Content$jobExperience = {
 };
 var _user$project$Content$extraExperiences = {
 	title: 'Nebenberufliche Erfahrungen',
-	content: {
+	names: {
 		ctor: '::',
-		_0: '[2010 -- 2013] Aktives Mitglied in der [Fachschaft Mathe & Informatik](https://www.fs-infmath.uni-kiel.de/wiki/Hauptseite) der CAU Kiel',
+		_0: '2010 - 2013',
 		_1: {
 			ctor: '::',
-			_0: '[06/2012 -- 05/2013] Co-Organisator der [Konferenz der Informatikfachschaften 41.0](https://kif.fsinf.de/wiki/KIF410:Hauptseite)',
+			_0: '06/2012 - 05/2013',
 			_1: {
 				ctor: '::',
-				_0: '[04/2016 -- ] Co-Organisator vom [Elmoin Meetup](https://www.meetup.com/de-DE/Elmoin/)',
+				_0: '04/2016 - ',
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	content: {
+		ctor: '::',
+		_0: 'Aktives Mitglied in der [Fachschaft Mathe & Informatik](https://www.fs-infmath.uni-kiel.de/wiki/Hauptseite) der CAU Kiel',
+		_1: {
+			ctor: '::',
+			_0: 'Co-Organisator der [Konferenz der Informatikfachschaften 41.0](https://kif.fsinf.de/wiki/KIF410:Hauptseite)',
+			_1: {
+				ctor: '::',
+				_0: 'Co-Organisator vom [Elmoin Meetup](https://www.meetup.com/de-DE/Elmoin/)',
 				_1: {ctor: '[]'}
 			}
 		}
@@ -8397,24 +8456,49 @@ var _user$project$Content$extraExperiences = {
 };
 var _user$project$Content$education = {
 	title: 'Bildung',
-	content: {
+	names: {
 		ctor: '::',
-		_0: '[1993 -- 1997] Friedrich-Ebert-Grundschule in Büdelsdorf',
+		_0: '1993 - 1997',
 		_1: {
 			ctor: '::',
-			_0: '[1997 -- 2006] Helene-Lange-Gymnasium in Rendsburg  --   Abschluss: Abitur',
+			_0: '1997 - 2006',
 			_1: {
 				ctor: '::',
-				_0: '[WS2007 -- SS2009] CAU Kiel 1-Fach Bachelor Biologie',
+				_0: 'WS2007 - SS2009',
 				_1: {
 					ctor: '::',
-					_0: '[zum WS 2009] CAU Kiel Wechsel des Studiengangs',
+					_0: 'zum WS 2009',
 					_1: {
 						ctor: '::',
-						_0: '[WS2009 -- WS2013] CAU Kiel 1-Fach Bachelor Informatik',
+						_0: 'WS2009 - WS2013',
 						_1: {
 							ctor: '::',
-							_0: '[2013 -- 2015] RBZ Technik in Kiel  --  Abschluss: Fachinformatiker Anwendungsentwicklung',
+							_0: '2013 - 2015',
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	},
+	content: {
+		ctor: '::',
+		_0: 'Friedrich-Ebert-Grundschule in Büdelsdorf',
+		_1: {
+			ctor: '::',
+			_0: 'Helene-Lange-Gymnasium in Rendsburg -  Abschluss: Abitur',
+			_1: {
+				ctor: '::',
+				_0: 'CAU Kiel 1-Fach Bachelor Biologie',
+				_1: {
+					ctor: '::',
+					_0: 'CAU Kiel Wechsel des Studiengangs',
+					_1: {
+						ctor: '::',
+						_0: 'CAU Kiel 1-Fach Bachelor Informatik',
+						_1: {
+							ctor: '::',
+							_0: 'RBZ Technik in Kiel  -  Abschluss: Fachinformatiker Anwendungsentwicklung',
 							_1: {ctor: '[]'}
 						}
 					}
@@ -8424,21 +8508,30 @@ var _user$project$Content$education = {
 	}
 };
 var _user$project$Content$contactInfo = {
-	title: 'Kontakt',
-	content: {
+	title: 'Personal information',
+	names: {
 		ctor: '::',
-		_0: 'Tomke Reibisch',
+		_0: 'Phone',
 		_1: {
 			ctor: '::',
-			_0: 'Tel.: 0151/40037773',
+			_0: 'E-Mail',
 			_1: {
 				ctor: '::',
-				_0: '<treibisch@gmail.com>',
-				_1: {
-					ctor: '::',
-					_0: 'Geb. am 02. September 1986 in Rendsburg',
-					_1: {ctor: '[]'}
-				}
+				_0: 'Date of birth',
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	content: {
+		ctor: '::',
+		_0: '0151 40037773',
+		_1: {
+			ctor: '::',
+			_0: 'treibisch@gmail.com',
+			_1: {
+				ctor: '::',
+				_0: '02 September 1986',
+				_1: {ctor: '[]'}
 			}
 		}
 	}
@@ -8465,50 +8558,38 @@ var _user$project$Content$blocks = {
 	}
 };
 var _user$project$Content$gravatarSource = _elm_lang$html$Html_Attributes$src('https://secure.gravatar.com/avatar/fa61ab6f435658b0255a28d1ce2c7f69?s=200');
-var _user$project$Content$Group = F2(
-	function (a, b) {
-		return {title: a, content: b};
+var _user$project$Content$Group = F3(
+	function (a, b, c) {
+		return {title: a, names: b, content: c};
 	});
 var _user$project$CV$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 	});
-var _user$project$CV$listify = A2(
-	_elm_lang$core$Basics$flip,
-	F2(
-		function (x, y) {
-			return {ctor: '::', _0: x, _1: y};
-		}),
-	{ctor: '[]'});
-var _user$project$CV$ulify = function (content) {
+var _user$project$CV$markdown = function (field) {
 	return A2(
-		_elm_lang$html$Html$ul,
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
 		{
 			ctor: '::',
-			_0: _user$project$CSS$listStyle,
-			_1: {ctor: '[]'}
-		},
-		A2(
-			_elm_lang$core$List$map,
-			function (element) {
-				return A2(
-					_elm_lang$html$Html$li,
+			_0: A2(
+				_evancz$elm_markdown$Markdown$toHtml,
+				{
+					ctor: '::',
+					_0: _user$project$CSS$fieldStyle,
+					_1: {ctor: '[]'}
+				},
+				field),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$br,
 					{ctor: '[]'},
-					element);
-			},
-			A2(
-				_elm_lang$core$List$map,
-				_user$project$CV$listify,
-				A2(
-					_elm_lang$core$List$map,
-					function (element) {
-						return A2(
-							_evancz$elm_markdown$Markdown$toHtml,
-							{ctor: '[]'},
-							element);
-					},
-					content))));
+					{ctor: '[]'}),
+				_1: {ctor: '[]'}
+			}
+		});
 };
 var _user$project$CV$blockView = function (_p1) {
 	var _p2 = _p1;
@@ -8523,7 +8604,11 @@ var _user$project$CV$blockView = function (_p1) {
 			ctor: '::',
 			_0: A2(
 				_elm_lang$html$Html$h3,
-				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _user$project$CSS$headerStyle,
+					_1: {ctor: '[]'}
+				},
 				{
 					ctor: '::',
 					_0: _elm_lang$html$Html$text(_p2.title),
@@ -8531,8 +8616,26 @@ var _user$project$CV$blockView = function (_p1) {
 				}),
 			_1: {
 				ctor: '::',
-				_0: _user$project$CV$ulify(_p2.content),
-				_1: {ctor: '[]'}
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _user$project$CSS$leftColumnStyle,
+						_1: {ctor: '[]'}
+					},
+					A2(_elm_lang$core$List$map, _user$project$CV$markdown, _p2.names)),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _user$project$CSS$rightColumnStyle,
+							_1: {ctor: '[]'}
+						},
+						A2(_elm_lang$core$List$map, _user$project$CV$markdown, _p2.content)),
+					_1: {ctor: '[]'}
+				}
 			}
 		});
 };
@@ -8556,6 +8659,18 @@ var _user$project$CV$gravatar = A2(
 		}
 	},
 	{ctor: '[]'});
+var _user$project$CV$mainHeader = A2(
+	_elm_lang$html$Html$h2,
+	{
+		ctor: '::',
+		_0: _user$project$CSS$headerStyle,
+		_1: {ctor: '[]'}
+	},
+	{
+		ctor: '::',
+		_0: _elm_lang$html$Html$text('Curriculum Vitae: Tomke Reibisch'),
+		_1: {ctor: '[]'}
+	});
 var _user$project$CV$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -8566,11 +8681,15 @@ var _user$project$CV$view = function (model) {
 		},
 		{
 			ctor: '::',
-			_0: _user$project$CV$cvView,
+			_0: _user$project$CV$mainHeader,
 			_1: {
 				ctor: '::',
-				_0: _user$project$CV$gravatar,
-				_1: {ctor: '[]'}
+				_0: _user$project$CV$cvView,
+				_1: {
+					ctor: '::',
+					_0: _user$project$CV$gravatar,
+					_1: {ctor: '[]'}
+				}
 			}
 		});
 };

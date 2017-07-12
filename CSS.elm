@@ -7,12 +7,19 @@ import Html exposing (Attribute)
 mainStyle : Html.Attribute a
 mainStyle =
     style
-        [ ( "padding", "15px" )
-        , ( "width", "100%" )
+        [ ( "margin", "15px" )
         , ( "height", "100%" )
         , ( "font-family", "monospace" )
         , ( "font-size", "14px" )
-        , ( "float", "left" )
+        ]
+
+
+headerStyle : Html.Attribute a
+headerStyle =
+    style
+        [ ( "clear", "both" )
+        , ( "background-color", "#98ff98" )
+        , ( "padding", "5px" )
         ]
 
 
@@ -42,9 +49,23 @@ blockStyle =
 listStyle : Html.Attribute a
 listStyle =
     style
-        [ ( "list-style-type", "none" )
-        , ( "padding", "10px 10px" )
+        [ ( "padding", "10px 10px" )
         , ( "border-radius", "4px" )
-        , ( "color", "white" )
-        , ( "background-color", "#4e875b" )
         ]
+
+
+leftColumnStyle =
+    style [ ( "display", "inline-block" ), ( "width", "20%" ) ]
+
+
+rightColumnStyle =
+    style [ ( "display", "inline-block" ), ( "width", "80%" ) ]
+
+
+rowStyle : Html.Attribute a
+rowStyle =
+    style []
+
+
+fieldStyle =
+    style [ ( "display", "inline-block" ) ]
