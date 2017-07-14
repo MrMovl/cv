@@ -9,8 +9,8 @@ mainStyle =
     style
         [ ( "margin", "15px" )
         , ( "height", "100%" )
-        , ( "font-family", "monospace" )
-        , ( "font-size", "14px" )
+        , ( "font-family", "FiraCode monospace" )
+        , ( "font-size", "18px" )
         ]
 
 
@@ -26,8 +26,7 @@ headerStyle =
 imageStyle : Html.Attribute a
 imageStyle =
     style
-        [ ( "float", "left" )
-        , ( "margin", "13px" )
+        [ ( "margin", "13px" )
         , ( "border-radius", "4px" )
         ]
 
@@ -36,7 +35,7 @@ contentStyle : Html.Attribute a
 contentStyle =
     style
         [ ( "float", "left" )
-        , ( "width", "80%" )
+        , ( "width", "100%" )
         , ( "height", "100%" )
         ]
 
@@ -51,6 +50,30 @@ listStyle =
     style
         [ ( "padding", "10px 10px" )
         , ( "border-radius", "4px" )
+        ]
+
+
+contactLeftColumn =
+    style
+        [ ( "vertical-align", "top" )
+        , ( "display", "inline-block" )
+        , ( "width", "20%" )
+        ]
+
+
+contactRightColumn =
+    style
+        [ ( "vertical-align", "top" )
+        , ( "display", "inline-block" )
+        , ( "width", "20%" )
+        ]
+
+
+contactCenterColumn =
+    style
+        [ ( "vertical-align", "top" )
+        , ( "display", "inline-block" )
+        , ( "width", "60%" )
         ]
 
 

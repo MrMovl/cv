@@ -18,8 +18,7 @@ gravatarSource =
 
 blocks : List Group
 blocks =
-    [ contactInfo
-    , education
+    [ education
     , jobExperience
     , extraExperiences
     , misc

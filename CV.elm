@@ -23,7 +23,16 @@ model =
 view : Model -> Html Msg
 view model =
     div [ mainStyle ]
-        [ mainHeader, cvView, gravatar ]
+        [ mainHeader, contactView, cvView ]
+
+
+contactView =
+    div [ blockStyle ]
+        [ h3 [ headerStyle ] [ text contactInfo.title ]
+        , div [ contactLeftColumn ] (List.map markdown contactInfo.names)
+        , div [ contactCenterColumn ] (List.map markdown contactInfo.content)
+        , div [ contactRightColumn ] [ gravatar ]
+        ]
 
 
 mainHeader =
