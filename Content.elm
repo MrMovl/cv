@@ -39,68 +39,66 @@ contactInfo =
 
 education : Group
 education =
-    { title = "Bildung"
+    { title = "Education"
     , names =
         [ "1993 - 1997"
         , "1997 - 2006"
-        , "WS2007 - SS2009"
-        , "zum WS 2009"
-        , "WS2009 - WS2013"
+        , "2007 - 2009"
+        , "2009 - 2013"
         , "2013 - 2015"
         ]
     , content =
-        [ "Friedrich-Ebert-Grundschule in Büdelsdorf"
-        , "Helene-Lange-Gymnasium in Rendsburg -  Abschluss: Abitur"
-        , "CAU Kiel 1-Fach Bachelor Biologie"
-        , "CAU Kiel Wechsel des Studiengangs"
-        , "CAU Kiel 1-Fach Bachelor Informatik"
-        , "RBZ Technik in Kiel  -  Abschluss: Fachinformatiker Anwendungsentwicklung"
+        [ "Friedrich-Ebert Elementary School in Büdelsdorf"
+        , "Helene-Lange-Gymnasium in Rendsburg - Degree: Abitur"
+        , "CAU Kiel Bachelor Biology"
+        , "CAU Kiel Bachelor Computer Science"
+        , "RBZ Technik in Kiel  -  Degree: Fachinformatiker Anwendungsentwicklung (qualified application developer"
         ]
     }
 
 
 extraExperiences : Group
 extraExperiences =
-    { title = "Nebenberufliche Erfahrungen"
+    { title = "Other experiences"
     , names =
         [ "2010 - 2013"
         , "06/2012 - 05/2013"
-        , "04/2016 - "
+        , "04/2016 - ongoing"
         ]
     , content =
-        [ "Aktives Mitglied in der [Fachschaft Mathe & Informatik](https://www.fs-infmath.uni-kiel.de/wiki/Hauptseite) der CAU Kiel"
-        , "Co-Organisator der [Konferenz der Informatikfachschaften 41.0](https://kif.fsinf.de/wiki/KIF410:Hauptseite)"
-        , "Co-Organisator vom [Elmoin Meetup](https://www.meetup.com/de-DE/Elmoin/)"
+        [ "Active member of the [student representatives for Math & Computer Science](https://www.fs-infmath.uni-kiel.de/wiki/Hauptseite) at the CAU Kiel"
+        , "Co-Organiser of the [conference for the german student representatives for Computer Science 41.0](https://kif.fsinf.de/wiki/KIF410:Hauptseite)"
+        , "Co-Organiser of the [Elmoin Meetup](https://www.meetup.com/de-DE/Elmoin/)"
         ]
     }
 
 
 jobExperience : Group
 jobExperience =
-    { title = "Berufserfahrung"
+    { title = "Job experience"
     , names =
         [ "09/2006 - 06/2007"
         , "08/2008 - 10/2011"
         , "11/2011 - 03/2013"
         , "05/2013 - 01/2015"
-        , "02/2015 - "
+        , "02/2015 - ongoing"
         ]
     , content =
-        [ "Zivildienst in der integrativen Kindertagesstätte Regenbogen in Rendsburg"
-        , "Studentische Aushilfskraft bei [getdigital.de](https://www.getdigital.de), tätig in Logistik, Versand, Textilveredelung und Kommissionierung"
-        , "Hilfswissenschaftler, Projekt im Bereich der künstlichen Intelligenz, Prof. Dr. Rainer Adelung (TF der CAU zu Kiel)"
-        , "Auszubildender, Börsenportal [ARIVA.DE](https://www.ariva.de)"
-        , "Software Entwickler, [graphomate GmbH](http://www.graphomate.com) (Schwerpunkt im Bereich Visualisierung)"
+        [ "Alternative civilian service at the inclusive day-care centre 'Regenbogen' in Rendsburg"
+        , "Part time employee at [getdigital.de](https://www.getdigital.de), working on logistics, shipment and imprinting shirts"
+        , "Student assistant working on an artificial intelligence project, Prof. Dr. Rainer Adelung (TF of the CAU Kiel)"
+        , "Trainee at [ARIVA.DE](https://www.ariva.de), a stock price portal"
+        , "Frontend Developer creating visualization tools at [graphomate GmbH](http://www.graphomate.com)"
         ]
     }
 
 
 misc : Group
 misc =
-    { title = "Weiteres"
+    { title = "Misc"
     , names = [ "Languages", "Non-technical hobbies" ]
     , content =
-        [ "Deutsch (Muttersprache), Englisch (fließend)"
-        , "Fotografie, Literatur  Comics, Schlagzeug, Rollen- und Brettspiele, Kochen, Tischlern"
+        [ "German (mother tounge), English (fluent)"
+        , "photography, literature, comic books, drums, roleplaying and boardgames, woodworking"
         ]
     }
